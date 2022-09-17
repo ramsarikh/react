@@ -1,3 +1,11 @@
+Create a New React App
+
+
 npx create-react-app my-app
 cd my-app
 npm start
+
+
+Build Command
+
+  npm run build
