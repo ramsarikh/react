@@ -17,3 +17,30 @@ useEffect(() => {
     
     
 <div className={`ProgressProfile ${isProgressSticky && 'progress-sticky shadow'}`}></div>
+
+
+
+
+
+
+
+2nd 
+
+  const [isProgressSticky, setIsProgressSticky] = useState(false);
+
+
+ useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        setIsProgressSticky(true)
+      } else {
+        setIsProgressSticky(false)
+      }
+    })
+    return () => {
+      window.removeEventListener('scroll', null)
+    }
+  }, [])
+
+
+  console.log('isProgressSticky', isProgressSticky);
