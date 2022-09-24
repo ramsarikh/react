@@ -44,3 +44,11 @@ useEffect(() => {
 
 
   console.log('isProgressSticky', isProgressSticky);
+  
+  
+   <div className={`ProgressProfile ${isProgressSticky && 'progress-sticky shadow'}`}>
+        
+
+      </div>
+
+
