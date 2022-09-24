@@ -1,0 +1,9 @@
+Toggle class : -
+
+
+ const [show, setShow] = React.useState(false)
+ 
+  useEffect(() => {
+    const body = document.getElementsByTagName('body')
+      body[0].classList.toggle('hello')
+  }, [show])
