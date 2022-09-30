@@ -1,0 +1,17 @@
+// import logo from './logo.svg';
+import React,{ useState } from 'react';
+import './App.css';
+
+function App() {
+
+  const [data, setData]=useState ("ram")
+  return (
+    <div className="App">
+ 
+     <h1>{data}</h1>
+     <button onClick={()=>setData("Sarikh")}>ss</button>
+    </div>
+  );
+}
+
+export default App;
