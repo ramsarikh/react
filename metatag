@@ -1,0 +1,10 @@
+document.title = showError ? "404 - Page not found" : "Title";
+document.querySelector("meta[name='description']").setAttribute('content', showError ? "404 - Page not found" : 'About us ');
+document.querySelector("meta[name='keywords']").setAttribute('content', showError ? "404 - Page not found" : 'About us');
+
+
+
+
+
+ <meta name="description"  content="" />
+<meta name="keywords"  content="" />
