@@ -1,0 +1,25 @@
+ const [showError, setpShowError] = useState(false);
+    const [cmsTitle, setcmsTitle] = useState('');
+    const [pContent, setpContent] = useState('');
+    useEffect(() => {
+        getData();
+    }, [])
+    const getData = async () => {
+        await axios.get(Globals.BASE_URL + '' + Globals.CONTENT_URL + '/23', {},
+            {})
+            .then(function (response) {
+                console.log(response.data)
+                if (response.data.status == 'ok') {
+                    var count = Object.keys(response.data.cms).length;
+                    if (count) {
+                        // console.log(response.data.cms.pagename);
+                        setcmsTitle(response.data.cms.pageheading);
+                        setpContent(response.data.cms.pagecontent)
+                    } else {
+                        setpShowError(true);
+                    }
+                } else {
+                    setpShowError(true);
+                }
+            })
+    }
